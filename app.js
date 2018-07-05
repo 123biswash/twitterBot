@@ -30,3 +30,12 @@ function tweetIt(txt){
 	}
 }
 
+fs.readFile('/tweet.json', function(err, data) {
+  // If an error occurred, handle it (throw, propagate, etc)
+  if(err) {
+    console.log('Unknown Error');
+    return;
+  }
+  // Otherwise, log the file contents
+  console.log(data);
+});
