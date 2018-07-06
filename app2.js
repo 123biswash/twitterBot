@@ -4,7 +4,7 @@ var config = require('./config');
 var T = new Twit(config);
 
 
-setInterval(tweetIt, 1000*20);
+setInterval(tweetIt, 1000*5000);
 tweetIt();
 
 function tweetIt(){
