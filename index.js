@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 //const PORT = process.env.PORT || 5000
+console.log('aaa')
 console.log(process.env.PORT)
 let bodyParser = require("body-parser")
 let hmac = require('./security')
