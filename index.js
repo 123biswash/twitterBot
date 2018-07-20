@@ -15,13 +15,13 @@ express()
   	res.send("index page")
   })
   .post("/webhooks/twitter", (req, res) => {
-  	//console.log(req.body.name_here)
-  	res.send("hello world")
+  	console.log(req.body)
+  	//res.send("hello world")
   })
   .get("/webhooks/twitter", (req, res) => {
-  	//res.send({
-  		//"response_token": "sha256="+hmac.get_challenge_response(config.consumer_secret, req.query.crc_token)
-  	//})
-  	res.send("hello world")
+  	res.send({
+  		"response_token": "sha256="+hmac.get_challenge_response(config.consumer_secret, req.query.crc_token)
+  	}
+  	//res.send("hello world")
   })
   .listen(process.env.PORT || 5000, () => console.log('Listening ${ PORT }'))
