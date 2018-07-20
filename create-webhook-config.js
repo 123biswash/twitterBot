@@ -17,7 +17,7 @@ var request_options = {
   url: 'https://api.twitter.com/1.1/account_activity/webhooks.json',
   oauth: twitter_oauth,
   headers: {
-    'Content-type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/x-www-form-urlencoded'
   },
   form: {
     url: WEBHOOK_URL
