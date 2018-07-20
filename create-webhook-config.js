@@ -14,7 +14,7 @@ var WEBHOOK_URL = config.webhook_url
 
 // request options
 var request_options = {
-  url: 'http://api.twitter.com/1.1/account_activity/webhooks.json',
+  url: 'https://api.twitter.com/1.1/account_activity/webhooks.json',
   oauth: twitter_oauth,
   headers: {
     'Content-type': 'application/x-www-form-urlencoded'
