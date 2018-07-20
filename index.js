@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
-const PORT = process.env.PORT || 5000
+//const PORT = process.env.PORT || 5000
+console.log(process.env.PORT)
 let bodyParser = require("body-parser")
 let hmac = require('./security')
 let config = require('./config')
@@ -22,4 +23,4 @@ express()
   	//})
   	res.send("hello world")
   })
-  .listen(PORT, () => console.log('Listening ${ PORT }'))
+  .listen(process.env.PORT || 5000, () => console.log('Listening ${ PORT }'))
