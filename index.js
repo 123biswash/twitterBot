@@ -19,6 +19,9 @@ express()
   	//res.send("hello world")
   })
   .get("/webhooks/twitter", (req, res) => {
+  	console.log('bbb')
+  	console.log(req.query.crc_token)
+  	console.log('bbb')
   	res.send({
   		"response_token": "sha256="+hmac.get_challenge_response(config.consumer_secret, req.query.crc_token)
   	})
