@@ -9,6 +9,9 @@ let config = require('./config')
 express()
   .use(bodyParser.json())
   .use(bodyParser.urlencoded({ extended: false }))
+  .get("/", (req, res) => {
+  	res.send("index page")
+  })
   .post("/webhooks/twitter", (req, res) => {
   	//console.log(req.body.name_here)
   	res.send("hello world")
