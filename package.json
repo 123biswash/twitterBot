@@ -2,7 +2,7 @@
   "name": "twitter",
   "version": "1.0.0",
   "description": "",
-  "main": "app2.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "crypto": "^1.0.1",
