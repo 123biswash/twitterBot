@@ -9,7 +9,7 @@ var twitter_oauth = {
   token_secret: config.access_token_secret
 }
 
-var WEBHOOK_URL = 'https://your-webhook-url'
+var WEBHOOK_URL = config.webhook_url
 
 
 // request options
@@ -23,6 +23,7 @@ var request_options = {
     url: WEBHOOK_URL
   }
 }
+console.log(request_options.form.url)
 
 // POST request to create webhook config
 request.post(request_options, function (error, response, body) {

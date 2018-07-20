@@ -8,11 +8,15 @@ let config = require('./config')
 
 express()
   .use(bodyParser.json())
-  .use(bodyParser.urlencoded({ extended: false })
+  .use(bodyParser.urlencoded({ extended: false }))
   .post("/webhooks/twitter", (req, res) => {
   	//console.log(req.body.name_here)
   	res.send("hello world")
   })
   .get("/webhooks/twitter", (req, res) => {
-  	res.send(hmac.get_challenge_response(config.consumer_secret, req.query.crc_token))
+  	//res.send({
+  		//"response_token": "sha256="+hmac.get_challenge_response(config.consumer_secret, req.query.crc_token)
+  	//})
+  	res.send("hello world")
   })
+  .listen(PORT, () => console.log('Listening ${ PORT }'))
