@@ -23,7 +23,7 @@ express()
   		console.log('dm typing event')
   	}
   	else {
-  		console.log('another event')
+  		console.log(Object.keys(req.body))
   	}
   	//res.send("hello world")
   })

@@ -1,16 +1,9 @@
-This branch has an example of how to get a number of tweets from
-Twitter, get the username of the tweeter and the text within the tweet,
-then export it to a csv file (trying.csv)
+Scrapping almost everything so far to make an app that recieves post requests per Twitter event via a webhook url.
 
-The 3 files to look at are:
-- app2political.js    (name is misleading sorry)
-- thisisus.js
-- trying.csv
+App index url : https://jurassic-world-mediatech-bot.herokuapp.com
+App webhook url : https://jurassic-world-mediatech-bot.herokuapp.com/webhooks/twitter
 
-If you run app2political.js, it will update trying.csv with some tweets.
+Status as of 07-21-2018 03:02 AM in the morning....
+Finally freaking works. Just need to process the events my webhook url recieves. Excited for this!!!
 
-Hopefully this helps a bit if you are new to node.js (like myself) and
-are having trouble with syntax.
-
-
-(ignore politicalstuff.js --- it's just some code I've been dumping in from time to time while I'm figuring stuff out)
+Will be removing all unecessary files soon after, and will put up examples of my requests + write up a short tutorial on how this works.
