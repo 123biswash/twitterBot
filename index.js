@@ -15,13 +15,22 @@ express()
   	res.send("index page")
   })
   .post("/webhooks/twitter", (req, res) => {
-  	console.log(req.body)
+  	//console.log(req.body.)
+  	if(req.body.favorite_events){
+  		console.log('favorite event')
+  	}
+  	else if(req.body.direct_message_indicate_typing_events){
+  		console.log('dm typing event')
+  	}
+  	else {
+  		console.log('another event')
+  	}
   	//res.send("hello world")
   })
   .get("/webhooks/twitter", (req, res) => {
-  	console.log('bbb')
-  	console.log(req.query.crc_token)
-  	console.log('bbb')
+  	//console.log('bbb')
+  	//console.log(req.query.crc_token)
+  	//console.log('bbb')
   	res.send(JSON.stringify({
   		"response_token": "sha256="+hmac.get_challenge_response(req.query.crc_token, config.consumer_secret)
   	}))
